@@ -5,7 +5,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     C1.apxio__Course_Details__c = details;
     if(credits == 1 ||  credits == 2 ||
     credits == 3 || credits == 4 ){
-        C1.apxio__Credits__c = credits;
+        C1.apxio__Credits__c = String.valueOf(credits);
         Insert C1;
         return C1.Id;
     }
