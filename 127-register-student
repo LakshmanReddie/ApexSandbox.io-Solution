@@ -7,5 +7,6 @@ public String registerStudent(String name, String phone, String email) {
 
     Insert S1;
     String reg = S1.Id;
-    return 'Select apxio__Registration_Number__c from apxio__Student__c where Id= :reg';
+    return 'Select apxio__Registration_Number__c from apxio__Student__c 
+            where Id= :reg';
 }
