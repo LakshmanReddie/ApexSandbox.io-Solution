@@ -9,7 +9,7 @@ public Id insertCourse(String name, String details, Integer credits) {
         Insert C1;
         return C1.Id;
     }
-    else{return '';}
+    else{return null;}
 
     
 
