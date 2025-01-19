@@ -6,6 +6,6 @@ public String registerStudent(String name, String phone, String email) {
     S1.apxio__Email__c= email;
 
     Insert S1;
-    S1= 'Select apxio__Registration_Number__c from apxio__Student__c where Id= :S1.Id';
+    S1 = [Select apxio__Registration_Number__c from apxio__Student__c where Id= :S1.Id];
     return S1.apxio__Registration_Number__c;
 }
