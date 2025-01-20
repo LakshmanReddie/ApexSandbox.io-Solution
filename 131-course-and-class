@@ -4,10 +4,10 @@ public void createCourseAndClass(String name, String description) {
     Course.Name= name;
     Course.apxio__Course_Details__c = description;
     Insert Course;
-    String C1 = [SELECT Id FROM apxio__Course__c];
+    String C1 = [SELECT Id FROM apxio__Course__c where Id =:Course.Id];
 
     apxio__Class__c Class = new apxio__Class__c();
-    Class.apxio__Course__c= Course.Id;
+    Class.apxio__Course__c= C1;
     Class.Name= name;
     Class.apxio__Description__c= description;
     Insert Class;
