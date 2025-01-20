@@ -1,0 +1,11 @@
+public void createCourseAndClass(String name, String description) {
+    // code here
+    apxio__Course__c Course =new apxio__Course__c();
+    Course.Name= name;
+    Course.apxio__Course_Details__c = description;
+
+    apxio__Class__c Class = new apxio__Class__c();
+    Class.Name= name;
+    Class.apxio__Description__c= description;
+
+}
