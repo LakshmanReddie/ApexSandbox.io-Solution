@@ -11,5 +11,6 @@ public void createCourseAndClass(String name, String description) {
     Class.Name= name;
     Class.apxio__Description__c= description;
     Insert Class;
+    return null;
 
 }
