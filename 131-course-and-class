@@ -10,7 +10,7 @@ public void createCourseAndClass(String name, String description) {
     apxio__Class__c newClass = new apxio__Class__c();
     newClass.Name = name; 
 
-    String truncatedDescription = (description.length() > 255) ? description.substring(0, 255) : description; 
+ //String truncatedDescription = (description.length() > 255) ? description.substring(0, 255) : description; 
     newClass.apxio__Description__c = truncatedDescription;
 
     newClass.apxio__Course__c = newCourse.Id; 
