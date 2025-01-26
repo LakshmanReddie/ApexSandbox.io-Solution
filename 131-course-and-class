@@ -7,7 +7,7 @@ public void createCourseAndClass(String name, String description) {
     String C1 = [SELECT Id FROM apxio__Course__c where Id =:Course.Id];
 
     apxio__Class__c Class = new apxio__Class__c();
-    Class.apxio__Course__c= C1;
+    Class.apxio__Course__c= C1.Id;
     Class.Name= name;
     Class.apxio__Description__c= description;
     Insert Class;
