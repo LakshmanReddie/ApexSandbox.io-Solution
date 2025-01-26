@@ -1,20 +1,18 @@
 public void createCourseAndClass(String name, String description) {
-    // code here
+    
     apxio__Course__c newCourse = new apxio__Course__c();
     newCourse.Name = name;
-    newCourse.apxio__Course_Details__c = description; 
+    String truncatedDescription = (description.length() > 255) ? description.substring(0, 255) : description; 
+    newCourse.apxio__Course_Details__c = truncatedDescription; 
 
     insert newCourse;
 
-    // Create the Class record
     apxio__Class__c newClass = new apxio__Class__c();
     newClass.Name = name; 
 
-    // Truncate description if necessary
     String truncatedDescription = (description.length() > 255) ? description.substring(0, 255) : description; 
     newClass.apxio__Description__c = truncatedDescription;
 
-    // Associate the Class with the Course
     newClass.apxio__Course__c = newCourse.Id; 
 
     insert newClass;
